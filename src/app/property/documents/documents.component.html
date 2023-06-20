@@ -1,0 +1,21 @@
+<section class="section profile">
+  <div class="row">
+    <div class="col-xl-4 d-flex justify-content-center align-items-center">
+      <app-dashboard></app-dashboard>
+    </div>
+
+    <div class="col-xl-8">
+      <br>
+      <div class="table-responsive">
+        <mat-card class="box" *ngFor="let document of documents">
+          <div class="document">{{ document.name }}</div>
+          <div class="icons">
+            <a class="icon"><mat-icon>visibility</mat-icon></a>
+            <a class="icon"><mat-icon>arrow_downward</mat-icon></a>
+          </div>
+        </mat-card>
+      </div>
+    </div>
+  </div>
+</section>
+

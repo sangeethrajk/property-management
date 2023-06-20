@@ -1,0 +1,152 @@
+<section class="section profile">
+  <div class="row">
+
+    <div class="col-xl-4 d-flex justify-content-center align-items-center">
+      <app-dashboard></app-dashboard>
+    </div>
+    <div class="col-xl-8">
+      <button mat-raised-button color="primary">Schemes</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button mat-raised-button color="primary">Documents</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <button mat-raised-button color="primary">Payments</button>
+      <br>
+      <br>
+      <div class="table-responsive">
+        <mat-card class="card" style="width: 804px; height: 264px; background: rgba(217, 217, 217, 0.4); border-radius: 20px;">
+          <mat-card-content class="card-body pt-3">
+            <h1 style="font-size: 20px;"><img src="assets/img/tick.png">&nbsp;Scheme Name</h1>
+            <br>
+
+            <table mat-table class="mat-table">
+              <ng-container matColumnDef="category">
+                <th mat-header-cell *matHeaderCellDef>Category</th>
+                <td mat-cell *matCellDef="let item">Category Value</td>
+              </ng-container>
+
+              <ng-container matColumnDef="number">
+                <th mat-header-cell *matHeaderCellDef>Number</th>
+                <td mat-cell *matCellDef="let item">Number Value</td>
+              </ng-container>
+
+              <ng-container matColumnDef="size">
+                <th mat-header-cell *matHeaderCellDef>Size</th>
+                <td mat-cell *matCellDef="let item">Size Value</td>
+              </ng-container>
+
+              <ng-container matColumnDef="documents">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let item">
+                  <button mat-raised-button color="primary" [routerLink]="['/document']">Documents</button>
+                </td>
+              </ng-container>
+
+              <ng-container matColumnDef="subCategory">
+                <th mat-header-cell *matHeaderCellDef>Sub Category</th>
+                <td mat-cell *matCellDef="let item">Sub Category Value</td>
+              </ng-container>
+
+              <ng-container matColumnDef="block">
+                <th mat-header-cell *matHeaderCellDef>Block</th>
+                <td mat-cell *matCellDef="let item">Block Value</td>
+              </ng-container>
+
+              <ng-container matColumnDef="rent">
+                <th mat-header-cell *matHeaderCellDef>Rent</th>
+                <td mat-cell *matCellDef="let item">Rent Value</td>
+              </ng-container>
+
+              <ng-container matColumnDef="payments">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let item">
+                  <button mat-raised-button color="primary" [routerLink]="['/payment']">Payments</button>
+                </td>
+              </ng-container>
+
+              <ng-container matColumnDef="type">
+                <th mat-header-cell *matHeaderCellDef>Type</th>
+                <td mat-cell *matCellDef="let item">Type Value</td>
+              </ng-container>
+
+              <ng-container matColumnDef="floor">
+                <th mat-header-cell *matHeaderCellDef>Floor</th>
+                <td mat-cell *matCellDef="let item">Floor Value</td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let item; columns: displayedColumns;"></tr>
+            </table>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+      <div class="table-responsive">
+        <mat-card class="card" style="width: 804px; height: 264px; background: rgba(217, 217, 217, 0.4); border-radius: 20px;">
+          <mat-card-content class="card-body pt-3">
+            <h1 style="font-size: 20px;"><img src="assets/img/tick.png">&nbsp;Scheme Name</h1>
+            <br>
+
+            <table mat-table class="mat-table">
+              <ng-container matColumnDef="category">
+                <th mat-header-cell *matHeaderCellDef>Category</th>
+                <td mat-cell *matCellDef="let item">Category Value</td>
+              </ng-container>
+
+              <ng-container matColumnDef="number">
+                <th mat-header-cell *matHeaderCellDef>Number</th>
+                <td mat-cell *matCellDef="let item">Number Value</td>
+              </ng-container>
+
+              <ng-container matColumnDef="size">
+                <th mat-header-cell *matHeaderCellDef>Size</th>
+                <td mat-cell *matCellDef="let item">Size Value</td>
+              </ng-container>
+
+              <ng-container matColumnDef="documents">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let item">
+                  <button mat-raised-button color="primary">Documents</button>
+                </td>
+              </ng-container>
+
+              <ng-container matColumnDef="subCategory">
+                <th mat-header-cell *matHeaderCellDef>Sub Category</th>
+                <td mat-cell *matCellDef="let item">Sub Category Value</td>
+              </ng-container>
+
+              <ng-container matColumnDef="block">
+                <th mat-header-cell *matHeaderCellDef>Block</th>
+                <td mat-cell *matCellDef="let item">Block Value</td>
+              </ng-container>
+
+              <ng-container matColumnDef="rent">
+                <th mat-header-cell *matHeaderCellDef>Rent</th>
+                <td mat-cell *matCellDef="let item">Rent Value</td>
+              </ng-container>
+
+              <ng-container matColumnDef="payments">
+                <th mat-header-cell *matHeaderCellDef></th>
+                <td mat-cell *matCellDef="let item">
+                  <button mat-raised-button color="primary" [routerLink]="['/payment']">Payments</button>
+                </td>
+              </ng-container>
+
+              <ng-container matColumnDef="type">
+                <th mat-header-cell *matHeaderCellDef>Type</th>
+                <td mat-cell *matCellDef="let item">Type Value</td>
+              </ng-container>
+
+              <ng-container matColumnDef="floor">
+                <th mat-header-cell *matHeaderCellDef>Floor</th>
+                <td mat-cell *matCellDef="let item">Floor Value</td>
+              </ng-container>
+
+              <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+              <tr mat-row *matRowDef="let item; columns: displayedColumns;"></tr>
+            </table>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+    </div>
+  </div>
+</section>
+
