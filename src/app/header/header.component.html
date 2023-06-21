@@ -1,30 +1,8 @@
-
 <!--Header Starts -->
-<header id="header" class="header d-flex align-items-center">
-
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-      <a href="index.html" class="logo d-flex align-items-center">
-
-        <img [routerLink]="['']" src="../../assets/img/tnhb_logo.png" alt="">
-
-      </a>
-      <nav id="navbar" class="navbar">
-        <ul>
-          <li><a [routerLink]="['/home']" routerLinkActive="active" >Home</a></li>
-          <li><a [routerLink]="['']" >Logout</a></li>
-
-        </ul>
-      </nav><!-- .navbar -->
-
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-
-    </div>
-  </header><!-- End Header -->
-
-  <section id="hero" class="hero">
-    <div style="padding:180px">
-      <h2 style="text-align: center;">Property Management<span></span></h2>
-    </div>
-  </section>
-
+<header class="p-0 mb-5" style="position: relative;">
+  <img src="../../assets/img/headerimg.jpg" alt="" class="img-fluid w-100" style="max-height: 19rem;">
+  <a mat-button target="_blank" class="text-white" style="position: absolute; top: 2rem; right: 3.5rem;">Logout</a>
+  <h1 class="text-white w-100 text-center" style="position: absolute; top:10rem; font-size: 4.5rem;">Property
+    Management</h1>
+</header>
+<!-- End Header -->

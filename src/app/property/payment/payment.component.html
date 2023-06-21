@@ -1,1 +1,149 @@
-<p>payment works!</p>
+<main class="section profile px-4 mb-5">
+    <div class="row">
+
+        <div class="col-4">
+            <app-dashboard></app-dashboard>
+        </div>
+
+        <div class="row col-8">
+            <div class="container-fluid">
+                <app-maintab></app-maintab>
+
+                <div class="col-12">
+
+                    <table mat-table [dataSource]="dataSource">
+
+                        <!-- Total Amount Column -->
+                        <ng-container matColumnDef="total_amount">
+                            <th mat-header-cell *matHeaderCellDef style="background-color: #3FB8DE;font-weight: bold;">
+                                Total Amount </th>
+                            <td mat-cell *matCellDef="let payment">{{ payment.total_amount }}</td>
+                        </ng-container>
+
+                        <!-- Paid Amount Column -->
+                        <ng-container matColumnDef="paid_amount">
+                            <th mat-header-cell *matHeaderCellDef style="background-color: #3FB8DE;font-weight: bold;">
+                                Paid Amount </th>
+                            <td mat-cell *matCellDef="let payment">{{ payment.paid_amount }}</td>
+                        </ng-container>
+
+                        <!-- Pending Amount Column -->
+                        <ng-container matColumnDef="pending_amount">
+                            <th mat-header-cell *matHeaderCellDef style="background-color: #3FB8DE;font-weight: bold;">
+                                Pending Amount
+                            </th>
+                            <td mat-cell *matCellDef="let payment">{{ payment.pending_amount }}</td>
+                        </ng-container>
+
+                        <!-- Repayment Period Column -->
+                        <ng-container matColumnDef="repayment_period">
+                            <th mat-header-cell *matHeaderCellDef style="background-color: #3FB8DE;font-weight: bold;">
+                                Repayment Period
+                            </th>
+                            <td mat-cell *matCellDef="let payment">{{ payment.repayment_period }}</td>
+                        </ng-container>
+
+                        <!-- Penal interest Column -->
+                        <ng-container matColumnDef="penal_interest">
+                            <th mat-header-cell *matHeaderCellDef style="background-color: #3FB8DE;font-weight: bold;">
+                                Total penal
+                                interest to be
+                                collected </th>
+                            <td mat-cell *matCellDef="let payment">{{ payment.penal_interest }}</td>
+                        </ng-container>
+
+                        <!-- Table Rows -->
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+                    </table>
+
+                    <table mat-table [dataSource]="dataSource1">
+
+                        <!-- S. No. Column -->
+                        <ng-container matColumnDef="s_no">
+                            <th mat-header-cell *matHeaderCellDef style="background-color: #3FB8DE;font-weight: bold;">
+                                S. No. </th>
+                            <td mat-cell *matCellDef="let payment1">{{ payment1.s_no }}</td>
+                        </ng-container>
+
+                        <!-- Date Column -->
+                        <ng-container matColumnDef="date">
+                            <th mat-header-cell *matHeaderCellDef style="background-color: #3FB8DE;font-weight: bold;">
+                                Date </th>
+                            <td mat-cell *matCellDef="let payment1">{{ payment1.date }}</td>
+                        </ng-container>
+
+                        <!-- Scheme Column -->
+                        <ng-container matColumnDef="scheme">
+                            <th mat-header-cell *matHeaderCellDef style="background-color: #3FB8DE;font-weight: bold;">
+                                Scheme
+                            </th>
+                            <td mat-cell *matCellDef="let payment1">{{ payment1.scheme }}</td>
+                        </ng-container>
+
+                        <!-- Details Column -->
+                        <ng-container matColumnDef="details">
+                            <th mat-header-cell *matHeaderCellDef style="background-color: #3FB8DE;font-weight: bold;">
+                                Details
+                            </th>
+                            <td mat-cell *matCellDef="let payment1">{{ payment1.details }}</td>
+                        </ng-container>
+
+                        <!-- Period Column -->
+                        <ng-container matColumnDef="period">
+                            <th mat-header-cell *matHeaderCellDef style="background-color: #3FB8DE;font-weight: bold;">
+                                Period </th>
+                            <td mat-cell *matCellDef="let payment1">{{ payment1.period }}</td>
+                        </ng-container>
+
+                        <!-- Due by Column -->
+                        <ng-container matColumnDef="due_by">
+                            <th mat-header-cell *matHeaderCellDef style="background-color: #3FB8DE;font-weight: bold;">
+                                Due by </th>
+                            <td mat-cell *matCellDef="let payment1">{{ payment1.due_by }}</td>
+                        </ng-container>
+
+                        <!-- Amount Column -->
+                        <ng-container matColumnDef="amount">
+                            <th mat-header-cell *matHeaderCellDef style="background-color: #3FB8DE;font-weight: bold;">
+                                Amount </th>
+                            <td mat-cell *matCellDef="let payment1">{{ payment1.amount }}</td>
+                        </ng-container>
+
+                        <!-- Penalty Column -->
+                        <ng-container matColumnDef="penalty">
+                            <th mat-header-cell *matHeaderCellDef style="background-color: #3FB8DE;font-weight: bold;">
+                                Penalty </th>
+                            <td mat-cell *matCellDef="let payment1">{{ payment1.penalty }}</td>
+                        </ng-container>
+
+                        <!-- Total Column -->
+                        <ng-container matColumnDef="total">
+                            <th mat-header-cell *matHeaderCellDef style="background-color: #3FB8DE;font-weight: bold;">
+                                Total </th>
+                            <td mat-cell *matCellDef="let payment1">{{ payment1.total }}</td>
+                        </ng-container>
+
+                        <!-- Pay Column -->
+                        <ng-container matColumnDef="pay">
+                            <th mat-header-cell *matHeaderCellDef style="background-color: #3FB8DE;font-weight: bold;">
+                                Pay </th>
+                            <td mat-cell *matCellDef="let payment1"><button class="rounded-pill py-1 px-2 w-100"
+                                    style="background-color: #3FB8DE47;border: none;">{{ payment1.pay }}</button></td>
+                        </ng-container>
+
+                        <!-- Table Rows -->
+                        <tr mat-header-row *matHeaderRowDef="displayedColumns1"></tr>
+                        <tr mat-row *matRowDef="let row; columns: displayedColumns1;"></tr>
+
+                    </table>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</main>

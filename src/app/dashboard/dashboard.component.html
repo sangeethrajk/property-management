@@ -1,23 +1,38 @@
-<mat-card class="card" style="width: 394px; height: 582px; background: rgba(217, 217, 217, 0.4); border-radius: 20px;">
-  <mat-card-content class="card-body profile-card pt-4 d-flex flex-column align-items-center">
-    <br>
-    <img src="assets/img/userlogo.png" alt="Profile" class="rounded-circle">
-    <br>
-    <br>
-    <table class="mat-table table-container">
-      <tr>
-        <th>Name:</th><td>Hariharan</td>
-      </tr>
-      <tr>
-        <th>Contact No:</th><td>987654321</td>
-      </tr>
-      <tr>
-        <th>Properties:</th><td>2</td>
-      </tr>
-      <tr>
-        <th>Job:</th><td>Govt/Private</td>
-      </tr>
+<mat-card class="person-details" style="background: rgba(217, 217, 217, 0.4);border-radius: 1.25em;">
+
+  <img mat-card-image src="../../assets/img/person_img.png" alt="Profile" class="">
+
+  <mat-card-content>
+
+    <table mat-table [dataSource]="dataSource" style="background-color: transparent;">
+
+      <!-- Name Column -->
+      <ng-container matColumnDef="name">
+        <td mat-cell *matCellDef="let element">{{ element.name }}</td>
+      </ng-container>
+
+      <!-- Separator Column -->
+      <ng-container matColumnDef="separator">
+        <td mat-cell *matCellDef="let element">{{ element.separator }}</td>
+      </ng-container>
+
+      <!-- Value Column -->
+      <ng-container matColumnDef="value">
+        <td mat-cell *matCellDef="let element">{{ element.value }}</td>
+      </ng-container>
+
+      <!-- Visibility Column -->
+      <ng-container matColumnDef="visibility">
+        <td mat-cell *matCellDef="let element"
+          [style.display]="isVisibilityColumnVisible(element.name) ? 'table-cell' : 'none'">
+          <a href=""><span class="material-symbols-outlined">visibility</span></a>
+        </td>
+      </ng-container>
+
+      <!-- Table Rows -->
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
     </table>
+
   </mat-card-content>
 </mat-card>
-
