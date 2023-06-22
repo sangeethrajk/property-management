@@ -15,19 +15,19 @@ export class HomeComponent {
   constructor() {
     // Populate the dataSource array with your data
     this.dataSource = [
-      { name: 'Scheme Type', separator: ':', value: '' },
-      { name: 'Asset Category', separator: ':', value: '' },
-      { name: 'Asset Sub-Category', separator: ':', value: '' },
-      { name: 'Unit No', separator: ':', value: '' },
-      { name: 'Block', separator: ':', value: '' },
-      { name: 'Floor', separator: ':', value: '' },
-      { name: 'Total Cost', separator: ':', value: '' },
-      { name: 'Plinth Area(sq.ft.)', separator: ':', value: '' },
-      { name: 'UDS Area(sq.ft.)', separator: ':', value: '' },
-      { name: 'Plot Area(sq.ft.)', separator: ':', value: '' },
-      { name: 'Carpet Area(sq.ft.)', separator: ':', value: '' },
-      { name: 'Allotment Order No', separator: ':', value: '' },
-      { name: 'Allotment Order Date', separator: ':', value: '' }
+      { name: 'Scheme Type', separator: ':', value: 'SFS' },
+      { name: 'Asset Category', separator: ':', value: 'Flat' },
+      { name: 'Asset Sub-Category', separator: ':', value: 'HIG' },
+      { name: 'Unit No', separator: ':', value: '208/2' },
+      { name: 'Block', separator: ':', value: '1' },
+      { name: 'Floor', separator: ':', value: '1' },
+      { name: 'Total Cost', separator: ':', value: '97,52,000' },
+      { name: 'Plinth Area(sq.ft.)', separator: ':', value: 'NA' },
+      { name: 'UDS Area(sq.ft.)', separator: ':', value: '1002' },
+      { name: 'Plot Area(sq.ft.)', separator: ':', value: '501' },
+      { name: 'Carpet Area(sq.ft.)', separator: ':', value: 'NA' },
+      { name: 'Allotment Order No', separator: ':', value: '1230' },
+      { name: 'Allotment Order Date', separator: ':', value: '01/03/2023' }
     ];
   }
 

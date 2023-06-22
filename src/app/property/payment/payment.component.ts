@@ -22,13 +22,11 @@ export interface PaymentTable1 {
 }
 
 const PAYMENT_DATA: PaymentTable[] = [
-  { total_amount: 1500000, paid_amount: 33000, pending_amount: 33000, repayment_period: 33000, penal_interest: 33000 },
+  { total_amount: 9752000, paid_amount: 4500000, pending_amount: 5252000, repayment_period: 1, penal_interest: 0 },
 ];
 
 const PAYMENT_DATA1: PaymentTable1[] = [
-  { s_no: 1, date: '01/01/2023', scheme: 'Scheme 1', details: 'Rent', period: '2 month', due_by: '15/01/2023', amount: 10000, penalty: 1000, total: 11000, pay: 'PAY' },
-  { s_no: 2, date: '01/01/2023', scheme: 'Scheme 1', details: 'Rent', period: '2 month', due_by: '15/01/2023', amount: 10000, penalty: 1000, total: 11000, pay: 'VIEW' },
-  { s_no: 3, date: '01/01/2023', scheme: 'Scheme 1', details: 'Rent', period: '2 month', due_by: '15/01/2023', amount: 10000, penalty: 1000, total: 11000, pay: 'VIEW' }
+  { s_no: 1, date: '01/04/2023', scheme: '90 Flats(30 HIG & 60 MIG) at ANWe', details: 'installment', period: '1', due_by: '01/05/2023', amount: 5252000, penalty: 109418, total: 5361418, pay: 'PAY' }
 ];
 
 @Component({
